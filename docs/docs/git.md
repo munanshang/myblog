@@ -1,7 +1,9 @@
 ---
 title: Git 命令及基础使用流程详解
-tag: Git
-categorie: 教程
+tag:
+- Git
+categories:
+- 开发工具
 sticky: 1
 top: 1
 ---
