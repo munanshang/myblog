@@ -48,6 +48,10 @@ export default defineConfig({
     // lastUpdated: true,
     themeConfig: {
         logo: '/logo.png',
+        outline: {
+            level: [2, 4],
+        },
+        outlineTitle: '目录',
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '首页', link: '/' }
