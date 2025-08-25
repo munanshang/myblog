@@ -47,7 +47,7 @@ export default defineConfig({
     extends: blogTheme,
     // lastUpdated: true,
     themeConfig: {
-        logo: './avatar.png',
+        logo: '../logo.png',
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '首页', link: '/' }
