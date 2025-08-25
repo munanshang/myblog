@@ -1,5 +1,5 @@
 import BlogTheme from '@sugarat/theme'
 
-import './static/scss/style.scss'
+import './style.scss'
 
 export default BlogTheme
