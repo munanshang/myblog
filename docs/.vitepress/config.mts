@@ -41,8 +41,7 @@ const blogTheme = getThemeConfig({
         options: {
             server: 'https://artalk.aocng.com',
             site: '我的博客'
-        },
-        mobileMinify: false
+        }
     }
 })
 // https://vitepress.dev/reference/site-config
