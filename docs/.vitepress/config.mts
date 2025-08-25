@@ -40,7 +40,7 @@ const blogTheme = getThemeConfig({
         type: 'artalk',
         options: {
             server: 'https://artalk.aocng.com',
-            site: 'Default Site'
+            site: '我的博客'
         },
         mobileMinify: false
     }
@@ -54,7 +54,7 @@ export default defineConfig({
     extends: blogTheme,
     // lastUpdated: true,
     themeConfig: {
-        logo: '../avatar.png',
+        logo: './avatar.png',
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '首页', link: '/' }
