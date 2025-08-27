@@ -47,7 +47,7 @@ const blogTheme = getThemeConfig({
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     lang: 'zh-CN',
-    title: "目南殇的博客",
+    title: "目南殇",
     description: "一名自由开发者",
     cleanUrls: true,
     extends: blogTheme,
