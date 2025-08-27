@@ -2,7 +2,7 @@
 title: Git 命令基础使用指南：从初始化到提交的完整流程
 tag:
 - Git
-categorie:
+categories:
 - 技术工具
 ---
 # Git 命令基础使用指南：从初始化到提交的完整流程
