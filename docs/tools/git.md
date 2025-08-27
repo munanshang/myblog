@@ -4,8 +4,8 @@ tag:
 - Git
 categories:
 - 技术工具
-sticky: 1
-top: 1
+sticky: 2
+top: 2
 ---
 
 # Git 命令及基础使用流程详解
