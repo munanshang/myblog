@@ -1,6 +1,6 @@
 ---
-title: Git 命令基础使用指南：从初始化到提交的完整流程
-tag:
+title: Git 命令基础使用指南
+tags:
 - Git
 categories:
 - 技术工具
