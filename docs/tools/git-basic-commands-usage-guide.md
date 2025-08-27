@@ -1,13 +1,9 @@
 ---
 title: Git 命令基础使用指南：从初始化到提交的完整流程
-tags:
+tag:
 - Git
-- Git 命令
-- 版本控制
-- 多人协作
-categories:
+categorie:
 - 技术工具
-- Git 入门
 ---
 # Git 命令基础使用指南：从初始化到提交的完整流程
 
