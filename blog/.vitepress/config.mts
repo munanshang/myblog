@@ -1,4 +1,5 @@
-import { defineConfig, getThemeConfig } from '@sugarat/theme/node'
+import { defineConfig } from 'vitepress'
+import { getThemeConfig } from '@sugarat/theme/node'
 
 const blogTheme = getThemeConfig({
     author: '目南殇',
@@ -42,7 +43,12 @@ const blogTheme = getThemeConfig({
             server: 'https://artalk.aocng.com',
             site: '我的博客'
         }
-    }
+    },
+    recommend: {
+      filter: (page) => {
+        return page.meta.hidden !== true
+      },
+    },
 })
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -88,6 +94,5 @@ export default defineConfig({
                 timeStyle: 'medium'
             }
         }
-
     }
 })
