@@ -17,28 +17,30 @@ for (const [path, module] of Object.entries(modules)) {
   // 跳过当前 index.md 自身
   if (path === './index.md') continue;
 
-  // 2. 提取文件名（用于链接）
-  const filename = path.replace('./', '')
+  // 2. 提取文件名（用于链接）并移除 .md 后缀
+  const filename = path.replace('./', '').replace('.md', '')
 
   // 3. 从 sugarat 主题的 __pageData.frontmatter 中获取 title
   // 数据结构：module.__pageData.frontmatter.title
   const frontmatter = module.__pageData?.frontmatter;
-  const title = frontmatter?.title || filename.replace('.md', '').replace(/-/g, ' ')
+  // 增强：处理多种分隔符并添加 trim
+  const defaultTitle = filename.replace(/-|_/g, ' ').trim();
+  const title = frontmatter?.title || defaultTitle
 
   articles.push({ filename, title })
 }
 
-// 按标题排序
-articles.sort((a, b) => a.title.localeCompare(b.title))
+// 优化：添加中文排序支持
+articles.sort((a, b) => a.title.localeCompare(b.title, 'zh-CN'))
 </script>
 
 <!-- 渲染链接列表 -->
 <template v-if="articles.length === 0">
-  <p>暂无文章，敬请期待～</p>
+  <p class="no-articles">暂无文章，敬请期待～</p>
 </template>
-<ul v-else>
-  <li v-for="article in articles" :key="article.filename" style="margin: 8px 0;">
-    <a :href="article.filename" style="color: #42b983; text-decoration: none;">
+<ul v-else class="article-list">
+  <li v-for="article in articles" :key="article.filename" class="article-item">
+    <a :href="article.filename" class="article-link">
       {{ article.title }}
     </a>
   </li>
