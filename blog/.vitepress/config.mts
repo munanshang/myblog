@@ -60,7 +60,8 @@ export default defineConfig({
         outlineTitle: '目录',
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: '首页', link: '/' }
+            { text: '首页', link: '/' },
+            { text: '技术工具', link: '/tools' }
         ],
 
         // sidebar: [
