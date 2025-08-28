@@ -1,6 +1,6 @@
 ---
 title: Git 命令基础使用指南
-tags:
+tag:
 - Git
 categories:
 - 技术工具
