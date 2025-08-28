@@ -67,7 +67,8 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '首页', link: '/' },
-            { text: '技术工具', link: '/tools/' }
+            { text: '技术工具', link: '/tools/' },
+            { text: '翱创框架', link: '/acframework/' }
         ],
 
         // sidebar: [
