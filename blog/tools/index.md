@@ -7,29 +7,28 @@ hidden: true
 ## 文章列表
 
 <script setup>
-// 1. 导入当前目录下所有 .md 文件（包含 Frontmatter 数据）
+// 1. 导入当前目录下所有 .md 文件（默认导入，保留完整模块数据）
 const modules = import.meta.glob('./*.md', { 
-  eager: true, 
-  import: 'default' 
+  eager: true 
 })
 
-// 2. 处理文章数据（初始化正确的数组变量）
-const articles = []  // 修正：将 articlesticles 改为 articles
-// 遍历所有导入的文件
-for (const [path, meta] of Object.entries(modules)) {
+const articles = []
+for (const [path, module] of Object.entries(modules)) {
   // 跳过当前 index.md 自身
   if (path === './index.md') continue;
 
-  // 提取文件名（用于链接）
+  // 2. 提取文件名（用于链接）
   const filename = path.replace('./', '')
 
-  // 3. 读取 Frontmatter 中的 title
-  const title = meta?.title || filename.replace('.md', '').replace(/-/g, ' ')
+  // 3. 从 sugarat 主题的 __pageData.frontmatter 中获取 title
+  // 数据结构：module.__pageData.frontmatter.title
+  const frontmatter = module.__pageData?.frontmatter;
+  const title = frontmatter?.title || filename.replace('.md', '').replace(/-/g, ' ')
 
-  articles.push({ filename, title })  // 这里也同步修正变量名
+  articles.push({ filename, title })
 }
 
-// 按标题字母排序（可选）
+// 按标题排序
 articles.sort((a, b) => a.title.localeCompare(b.title))
 </script>
 
