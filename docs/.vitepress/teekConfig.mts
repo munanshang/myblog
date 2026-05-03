@@ -35,12 +35,12 @@ export const teekConfig = defineTeekConfig({
   banner: {
     enabled: true, // 是否启用 Banner
     name: "目南殇 Blog", // Banner 标题，默认读取 vitepress 的 title 属性
-    bgStyle: "partImg", // partImg：带状主图；fullImg：整屏视口高度；pure：纯色
+    bgStyle: "fullImg", // 首页顶栏全屏背景；全站 body 等背景请用别的文件名
     pureBgColor: "#28282d", // Banner 背景色，bgStyle 为 pure 时生效
-    imgSrc: ["/image/bg.webp"], // 对应 docs/public/image/bg.webp
+    imgSrc: ["/image/banner-home-full.webp"], // docs/public/image/banner-home-full.webp
     imgInterval: 15000, // 当多张图片时（imgSrc 为数组），设置切换时间，单位：毫秒
     imgShuffle: false, // 图片是否随机切换，为 false 时按顺序切换，bgStyle 为 partImg 或 fullImg 时生效
-    imgWaves: false, // 仅 fullImg 时有效；partImg 下关闭
+    imgWaves: true, // 全屏 Banner 底部波浪，仅 fullImg 时有效
     mask: true, // Banner 图片遮罩，bgStyle 为 partImg 或 fullImg 时生效
     maskBg: "rgba(0, 0, 0, 0.4)", // Banner 遮罩颜色，如果为数字，则是 rgba(0, 0, 0, ${maskBg})，如果为字符串，则作为背景色。bgStyle 为 partImg 或 fullImg 且 mask 为 true 时生效
     textColor: "#ffffff", // Banner 字体颜色，bgStyle 为 pure 时为 '#000000'，其他为 '#ffffff'
