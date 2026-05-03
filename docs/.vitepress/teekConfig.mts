@@ -23,6 +23,15 @@ export const teekConfig = defineTeekConfig({
       title: "困", // 鼠标悬停图标的提示语
     },
   },
+  /** 首页个人信息卡片下方；社交 SVG 需 iconType: "symbol"，否则会被当成字体 class 导致显示异常 */
+  social: [
+    {
+      name: "GitHub",
+      icon: "icon-github",
+      iconType: "symbol",
+      link: "https://github.com/munanshang",
+    },
+  ],
   banner: {
     enabled: true, // 是否启用 Banner
     name: "目南殇 Blog", // Banner 标题，默认读取 vitepress 的 title 属性
