@@ -99,6 +99,21 @@ export const teekConfig = defineTeekConfig({
     hideOnSinglePage: false, // 只有一页时是否隐藏
     // ...
   },
+  docAnalysis: {
+    createTime: '2026-01-01',
+    wordCount: true,
+    readingTime: true,
+    statistics: {
+      provider: 'busuanzi',
+      siteView: true,
+      pageView: true,
+      permalink: true,
+    },
+    appendInfo: [
+      { key: 'todayPv', label: '今日访问量', value: '...' },
+      { key: 'todayUv', label: '今日访客数', value: '...' },
+    ],
+  },
   footerInfo: {
     copyright: {
       createYear: 2026,

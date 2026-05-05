@@ -8,6 +8,24 @@ export default defineConfig({
   description: '目南殇的个人博客',
   lang: 'zh-CN',
   cleanUrls: true,
+  head: [
+    [
+      'script',
+      {},
+      `window.addEventListener('views', function(e) {
+  var d = e.detail;
+  if (!d || !d.today) return;
+  var items = document.querySelectorAll('.tk-doc-analysis__item');
+  items.forEach(function(item) {
+    var spans = item.querySelectorAll('span');
+    if (spans.length < 2) return;
+    var label = (spans[0].textContent || '').trim();
+    if (label === '今日访问量') spans[1].textContent = d.today.site_pv + ' 次';
+    else if (label === '今日访客数') spans[1].textContent = d.today.site_uv + ' 人';
+  });
+});`,
+    ],
+  ],
   themeConfig: {
     siteTitle: '目南殇 Blog',
     nav: [
