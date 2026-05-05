@@ -104,15 +104,15 @@ export const teekConfig = defineTeekConfig({
     wordCount: true,
     readingTime: true,
     statistics: {
-      provider: 'busuanzi',
+      // Vercount 替代不蒜子；访问量/访客数由卡片内 viewCount、visitCount 展示（无「今日」分项）
+      provider: 'vercount',
       siteView: true,
       pageView: true,
       permalink: true,
+      tryRequest: true,
+      tryCount: 5,
+      tryIterationTime: 2000,
     },
-    appendInfo: [
-      { key: 'todayPv', label: '今日访问量', value: '...' },
-      { key: 'todayUv', label: '今日访客数', value: '...' },
-    ],
   },
   footerInfo: {
     copyright: {
